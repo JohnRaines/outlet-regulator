@@ -1,0 +1,59 @@
+********************************************************
+*PARTS LIST 
+*VERSION: 3 - 11 - 16 (dd - mm - yy)
+*AUTHOR: John Raines
+*CURRENT PROJECT PHASE: Early prototyping 
+*NOTES: CURRENTLY ONLY CONCERNED WITH AC OUTLET 
+	REGULATION NO CASE OR CARD READING 
+	FUNCTIONALITY CURRENTLY
+********************************************************
+GENERAL QUANTITIES
+	1X RELAY
+	1X ARDUINO UNO
+	1X RASPBERRY PI 3
+ESTIMATED COST: $73.89
+
+~~~~
+	
+RELAY
+   DIGIKEY #: Z1011-ND
+   MANUFAC #: G5LE-14 DC5
+   PRICE:     $1.44 (DIGIKEY)
+   
+   DESCRPTION: 
+	~NORMAL CLOSED (TYPE B).
+	~COIL CURRENT: 79.4mA  
+	~COIL VOLTAGE: 5v
+	~SWITCHING V:  250AC / 125DC
+	~CONTACT CRNT: 10A	
+
+   DIGIKEY LINK: http://www.digikey.com/product-detail/en/omron-electronics-inc-emc-div/G5LE-14-DC5/Z1011-ND/280371
+
+~~~~
+
+ARDUINO UNO
+   DIGIKEY #: N/A
+   MANUFAC #: N/A
+   PRICE:     $24.95
+
+   DESCRIPTION
+	~MICROCONTROLLER
+	~IO OUTPUT 5V 20mA
+
+   OFFICIALY ARDUINO STORE LINK: https://store-usa.arduino.cc/products/a000066
+   ADA FRUIT LINK: https://www.adafruit.com/product/50
+
+~~~~
+
+RASPBERRY PI 3
+   DIGIKEY #: 1690-1000-ND
+   MANUFAC #: N/A
+   PRICE: $47.50
+
+   DESCRIPTION
+	~EMBEDED COMPUTER
+	~IO OUTPUT 3.3v 3mA
+	~WIRELESS LAN SUPPORT 802.11n
+
+   DIGIKEY LINK: http://www.digikey.com/product-detail/en/raspberry-pi/RASPBERRY-PI-3/1690-1000-ND/6152799
+	
