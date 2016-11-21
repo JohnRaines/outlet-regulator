@@ -1,0 +1,70 @@
+/**********************************************/
+*The purpose of this guide is to inform anyone
+*taking on this project later how to configure
+*SSH and SCP connections with the pi
+*
+*this guide was written using a pi3, if at a 
+*later point the project advances away from 
+*this model, this guide may become invalid but
+*will be left up for reference.
+/**********************************************/
+
+Note: as I am writing this guide on 11/21/16, I am using the latest 
+distribution of Raspbian (Jessie lite ker: 4.4) and the latest version of 
+windows 10. Depending on how things have advanced since then and your own
+computer set up, steps may very. There are plenty of guides online on this 
+subject but most are out of date or have mixed success. The guide I followed
+is linked bellow, but I will transcribe most of the steps here for your convenience.
+
+https://anwaarullah.wordpress.com/2013/08/12/sharing-wifi-internet-connection-with-raspberry-pi-through-lanethernet-headless-mode/
+
+***********************
+PART1:
+SOFTWARE YOU WILL NEED:
+***********************
+~putty (http://www.putty.org/)
+	~ssh client, will allow you to remotely access the command line of the pi
+	 over lan
+
+~WinSCP (https://winscp.net/eng/download.php)
+	~scp client that will allow you to remotely copy files to and from the pi
+	 over lan
+
+
+**********************
+PART2:
+THE GUIDE
+**********************
+~Before you can connect via SSH you need to do some basic configuration steps
+
+~step 1: navigate to "Network and Sharing Center" and procede to "change adapter settings"
+
+~step 2: You will see a page with a summary of all the network connections you have. 
+	 RIGHT CLICK on the one providing your interenet and go to properties, then to sharing.
+
+~step 3: check the box "Allow other network users to connect through this computer's internet connection"
+	 then restart your computer. This step allows your pi to connect to the internet via your computer
+	 which is necesarry for the ssh connection.
+
+~step 4: repeat step 1 and right click on your ethernet connection, then go to properties. You should see
+	 a menu titled "this connection uses the following items". select "internet protocol version 4", go 
+	 to it's properties, and verify that there is some IP address selected.
+
+~step 5: plug in the pi via ethernet if you have not done so already. on the networks page you should see the 
+	 ethernet connection update to "Unidentified Network". Also check and make sure that the communication 
+	 lights on the pi's port are lit. 
+
+~step 6: open the command prompt and type "ping raspberrypi.mshome.net". If the ping works, your pi is connected
+ 	 you're ready to SSH. Record the IP that responds because that will be the IP used for SCP later
+
+~step 7: open Putty and enter either the ip you just recorded or "raspberrypi.mshome.net" in the hostname field
+	 and open the connection. You will be prompted for a username and password. The pi default are
+		username: pi
+		password: raspberry (note: when entering the password, there is no indication that your inputs
+					   are being recieved, just enter the password and hit enter)
+
+~step 8: you should now be connected to the pi via SSH.
+
+~step 9: install winscp and enter the IP address you recorded and the pi's username and password. SCP
+	 is enabled by default on the version I'm using, so you should be able to immediately start copying
+	 files to and from the pi over lan. 
