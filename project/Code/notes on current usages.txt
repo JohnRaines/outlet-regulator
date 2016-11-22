@@ -1,0 +1,10 @@
+led_blink.py (raspberry pi)
+	an LED blinker program that is being used to generate period gates for prototyping purposes
+
+
+
+/***************/
+/***NOT USED****/
+/***************/
+pi_slave_swtich.ino (arduino)
+	basic code for converting the pi's output to a signal that can drive our relay. 
