@@ -1,19 +1,22 @@
 ********************************************************
 *PARTS LIST 
-*VERSION: 4 - 11 - 16 (dd - mm - yy)
+*VERSION: 14 - 12 - 16 (dd - mm - yy)
 *AUTHOR: John Raines
 *CURRENT PROJECT PHASE: Early prototyping 
 *NOTES: CURRENTLY ONLY CONCERNED WITH AC OUTLET 
 	REGULATION NO CASE OR CARD READING 
 	FUNCTIONALITY CURRENTLY
+	
+*change log: removed arduino, added lcd and keypad
 ********************************************************
 GENERAL QUANTITIES
 	1X RELAY
-	1X ARDUINO UNO
 	1X RASPBERRY PI 3
 	1x MICRO SD CARD (8GB CLASS 4 MINIMUM: APPROXIMATE COST $6)
 	2X MONITOR CABLE (APPROXIMATE COST $5 EACH)
-ESTIMATED COST: $89.89
+	1x 16 x 2 LCD
+	1x 3x4 matrix keypad
+ESTIMATED COST: $XX.xx
 
 ~~~~
 	
@@ -33,17 +36,16 @@ RELAY
 
 ~~~~
 
-ARDUINO UNO
-   DIGIKEY #: N/A
-   MANUFAC #: N/A
-   PRICE:     $24.95
-
-   DESCRIPTION
-	~MICROCONTROLLER
-	~IO OUTPUT 5V 20mA
-
-   OFFICIALY ARDUINO STORE LINK: https://store-usa.arduino.cc/products/a000066
-   ADA FRUIT LINK: https://www.adafruit.com/product/50
+16x2 LCD Display
+	DIGIKEY #: NHD-0216BZ-RN-YBW-ND 
+	MANUFAC #: NHD-0216BZ-RN-YBW (NEWHAVEN DISPLAY)
+	PRICE:	   $8.73
+	
+	DESCRIPTION:
+		Basic 16x2 lcd display. Should be easily replacable with any lcd using Hitachi HD44780 LCD controller or
+		equivalent.
+	
+	DIGIKEY LINK: http://www.digikey.com/product-search/en?keywords=NHD-0216BZ-RN-YBW
 
 ~~~~
 
@@ -58,4 +60,21 @@ RASPBERRY PI 3
 	~WIRELESS LAN SUPPORT 802.11n
 
    DIGIKEY LINK: http://www.digikey.com/product-detail/en/raspberry-pi/RASPBERRY-PI-3/1690-1000-ND/6152799
+	
+~~~~
+
+MATRIX KEYPAD
+	DIGIKEY #: 1528-1136-ND
+	MANUFAC #: 419 (ADA FRUIT) 
+	PRICE:     $3.95
+	
+	DESCRIPTION
+		~Basic matrix keypad, should be drop in replacable with keypad of same dimensions.
+	
+	DIGIKEYLINK: http://www.digikey.com/product-detail/en/adafruit-industries-llc/419/1528-1136-ND/5353596
+	
+~~~~
+
+
+	
 	
