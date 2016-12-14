@@ -30,10 +30,15 @@ SOFTWARE YOU WILL NEED:
 	~scp client that will allow you to remotely copy files to and from the pi
 	 over lan
 
+only for method 2
+~Apache httpd (https://httpd.apache.org/)
+	~httpd server client that will allow you to make and host a site on a lan network
+	 from your machine
+
 
 **********************
 PART2:
-THE GUIDE
+METHOD 1
 **********************
 ~Before you can connect via SSH you need to do some basic configuration steps
 
@@ -68,3 +73,43 @@ THE GUIDE
 ~step 9: install winscp and enter the IP address you recorded and the pi's username and password. SCP
 	 is enabled by default on the version I'm using, so you should be able to immediately start copying
 	 files to and from the pi over lan. 
+
+			*******************
+			******WARNING******
+			*******************
+~Auburn University wifi has a grudge against linux devices. If you use this method on school
+ wifi, they'll put a stop to it
+
+**********************
+PART3:
+METHOD 2
+**********************
+~step 1: find a computer with a router that is not connected to the school's network (at the time of writing, there
+	 is one such router in Broun 409)
+
+~step 2: connect the pi to the router and power it on. once it's on the router will assign it a dynamic IP
+
+~step 3: open the command line and ping "raspberrypi.local" to find the IP address of the pi on the local network
+
+~step 4: use rsapberrypi.local or the IP you found from pinging it that to connect to it via putty or winscp on the 
+	 computer associated with the router
+
+~step 5: alternatively to step 4, connect your personal computer to the router and address the pi via the IP you found
+
+~note: using this method the pi will not have internet access. You will have to set up an HTTP server on another machine
+       on the local network to use the pi's network capabilities.
+
+~NOTE ON SETTING UP APACHE:
+	if you're using windows 10 or later, you're likely to see this error when trying to boot apache
+	
+	Error (OS 10013) An attempt was made to access a socket in a way forbidden by its access permissions. :AH00072: make_sock: could not bind to address [::]:80
+	(OS 10013) An attempt was made to access a socket in a way forbidden by its access permissions. :AH00072: make_sock: could not bind to address 0.0.0.0:80
+	AH00451: no listening sockets available, shutting down
+	AH00015: Unable to open logs
+
+	if you do, access services.msc and disable both the following (only 1 may be present)
+		~Web Deployment Agent Service (MsDepSvc)
+		~IIS / World Wide Web Publishing Service (W3SVC)
+
+	this should solve that error.
+ 
