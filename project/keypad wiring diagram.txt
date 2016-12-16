@@ -1,0 +1,13 @@
+keypad pin wiring
+
+rows: (pin, gpio)
+32, 12
+36, 16
+38, 20
+40, 21
+
+
+columns: (pin, gpio)
+33, 13
+35, 19
+37, 26
