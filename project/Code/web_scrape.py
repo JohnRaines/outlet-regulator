@@ -4,7 +4,10 @@
 #state
 #
 #Author: John Raines
-#Date: 14 - 12 - 16 (dd mm yy)
+#Date: 29 - 12 - 16 (dd mm yy)
+#
+#change log: added get_status for checking status
+#of monitor
 #**************************************************
 
 #imports
@@ -24,4 +27,15 @@ def get_site():
     nj = nj[index+3:index+15]
 
     return nj
+
+def get_status():
+    s = urllib.urlopen(SITE)
+    stat = s.read()
+
+    #status of machine is in format "Status: x" where x is the state
+    #status is at index+8
+    index = stat.index("Status: ")
+    stat = stat[index+8]
+
+    return stat
     

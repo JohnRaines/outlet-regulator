@@ -3,10 +3,10 @@
 #other files
 #
 #Author: John Raines
-#Date: 15 - 12 - 16 (dd mm yy)
+#Date: 29 - 12 - 16 (dd mm yy)
 #
-#change log: added keypad interrupt and lcd_update
-#function to clean things up a bit
+#change log: added monitor status checking and
+#extra courtesy messages when you put in a code
 #**************************************************
 
 #imports
@@ -137,10 +137,14 @@ def fling():
         pintext = "EnterPin: "
     else:
         print "congratulations shinji"
-        code = ""
+        code = ""   #clear code after entering
         pintext= "EnterPin: "
-        lcd_update("Processing...", "Please Wait")
-        time.sleep(5)
+        lcd_update("Processing...", "Please Wait")  #stall for time
+        time.sleep(3)
+        monitor_check() #check if the mointor is on
+        #remind people to sign out when done
+        lcd_update("Please sign out", "when done")
+        time.sleep(3)
         
         
 
@@ -148,5 +152,12 @@ def getmachine():
     global machine
     file = open("machine.txt", 'r')
     machine = str(file.read(1))
+
+def monitor_check():
+    monitor = web_scrape.get_status()
+    if monitor == "1":
+        print "monitor is on"
+    else:
+        print "monitor is off"
 
 main()
