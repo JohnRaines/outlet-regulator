@@ -126,10 +126,10 @@ def key_get():
 #relays the code input to the server
 def fling():
     global code,sixflag,machine,message,pintext
-    sixflag = False
-    confirm = 0
+    sixflag = False #clear the flag
+    confirm = 0     #clear the confirm choice variable
     lcd_update("Is " + code + " right?", "*= yes #= no")
-    print machine + code
+    print machine + code #print the code to the command line for debug purposes
     #get keypress
     while confirm != 1:
         press = kp.getKey()
@@ -140,7 +140,6 @@ def fling():
         code = ""
         pintext = "EnterPin: "
     else:
-        #print "congratulations shinji"
         code = ""   #clear code after entering
         pintext= "EnterPin: "
         lcd_update("Processing...", "Please Wait")  #stall for time
@@ -153,11 +152,15 @@ def fling():
         
 
 def getmachine():
+    #a txt with a single character is used to differentiate the machines
+    #this pulls the character from the text file on the sd card
+    #the character is prepended to whatever code is entered on the pad
     global machine
     file = open("machine.txt", 'r')
     machine = str(file.read(1))
 
 def monitor_check():
+    #monitor on or off is determined by a 1 or 0 on the site
     monitor = web_scrape.get_status()
     if monitor == "1":
         print "monitor is on"
