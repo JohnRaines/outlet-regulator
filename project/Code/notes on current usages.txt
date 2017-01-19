@@ -1,10 +1,13 @@
-led_blink.py (raspberry pi)
-	an LED blinker program that is being used to generate period gates for prototyping purposes
+center2.py
+	brain of the operation, contains main method and does all the logic stuff
+
+keypad_functions.py
+	has all the commands for reading from the keypad (called by center2)
+
+lcd_functions.py
+	has all the code for driving the lcd screen (thanks raspberrypi spy)(called by center2)
+
+web_Scrape.py
+	has the code for pulling the useful information from the http site. (called by center2)
 
 
-
-/***************/
-/***NOT USED****/
-/***************/
-pi_slave_swtich.ino (arduino)
-	basic code for converting the pi's output to a signal that can drive our relay. 
