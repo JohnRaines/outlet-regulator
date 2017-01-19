@@ -23,7 +23,7 @@ message = ""    #holds the "next job" message on the top line
 pintext = ""    #holds the "enter pin: xxxxx" message on the bottom line
 code = ""       #holds the code that was input
 packet = ""     #the input code and the machine code  that are sent to the site
-sixflag = False #used to check if the
+sixflag = False #used to check if 6 digits have been entered
 machine = ""    #holds the machine code character
 
 
@@ -34,6 +34,9 @@ LCD_D4 = 25
 LCD_D5 = 24
 LCD_D6 = 23
 LCD_D7 = 18
+
+#non redundant pin assignments
+MONITOR = 22
 
 def main():
     global message,pintext
@@ -77,6 +80,7 @@ def pin_setup():
     GPIO.setup(LCD_D5, GPIO.OUT) # DB5
     GPIO.setup(LCD_D6, GPIO.OUT) # DB6
     GPIO.setup(LCD_D7, GPIO.OUT) # DB7
+    GPIO.setup(MONITOR, GPIO.OUT)# relay control pin
 
 def lcd_update(top, bottom):
     lcd_functions.lcd_string(top, 0X80)
@@ -136,7 +140,7 @@ def fling():
         code = ""
         pintext = "EnterPin: "
     else:
-        print "congratulations shinji"
+        #print "congratulations shinji"
         code = ""   #clear code after entering
         pintext= "EnterPin: "
         lcd_update("Processing...", "Please Wait")  #stall for time
@@ -157,7 +161,9 @@ def monitor_check():
     monitor = web_scrape.get_status()
     if monitor == "1":
         print "monitor is on"
+        GPIO.output(MONITOR, GPIO.HIGH)
     else:
         print "monitor is off"
+        GPIO.output(MONITOR, GPIO.LOW)
 
 main()
