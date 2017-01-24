@@ -1,0 +1,17 @@
+This is a guide for all pin to pin connections (barring ground and power)
+
+pi	device
+8	LCD RS
+10	LCD E
+12	LCD DATA 4
+15	MONITOR ENABLE
+16	LCD DATA 5
+18	LCD DATA 6
+22	LCD DATA 7
+24	KEYPAD ROW 1
+26	KEYPAD ROW 2
+32	KEYPAD ROW 3
+36	KEYPAD ROW 4
+37	KEYPAD COLUMN 3
+38	KEYPAD COLUMN 1
+40	KEYPAD COLUMN 2  

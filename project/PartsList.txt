@@ -1,13 +1,10 @@
 ********************************************************
 *PARTS LIST 
-*VERSION: 14 - 12 - 16 (dd - mm - yy)
+*VERSION: 24 - 1 - 17 (dd - mm - yy)
 *AUTHOR: John Raines
 *CURRENT PROJECT PHASE: Early prototyping 
-*NOTES: CURRENTLY ONLY CONCERNED WITH AC OUTLET 
-	REGULATION NO CASE OR CARD READING 
-	FUNCTIONALITY CURRENTLY
 	
-*change log: removed arduino, added lcd and keypad
+*change log: ADDED MISC PARTS FOR PCB
 ********************************************************
 GENERAL QUANTITIES
 	1X RELAY
@@ -16,6 +13,13 @@ GENERAL QUANTITIES
 	2X MONITOR CABLE (APPROXIMATE COST $5 EACH)
 	1x 16 x 2 LCD
 	1x 3x4 matrix keypad
+	2X TERMINAL BLOCK HEADERS
+	PIN HEADERS
+		2X20
+		1X16
+		1X7
+	ASSORTED RIBBON CABLES
+
 ESTIMATED COST: $XX.xx
 
 ~~~~
@@ -75,6 +79,14 @@ MATRIX KEYPAD
 	
 ~~~~
 
+TERMINAL BLOCK HEADERS
+	DIGIKEY #: ED2610-ND 
+	MANUFAC #: OSTTC032162 (ON SHORE TECHNOLOGY)
+	PRICE: 	   $0.54
 
+	DESCRIPTION
+		~SCREW TOP TERMINAL BLOCK HEADERS FOR HOLDING POWER CABLES
+
+	DIGIKEYLINK: http://www.digikey.com/scripts/DkSearch/dksus.dll?Detail&itemSeq=216850970&uq=636208717186163630
 	
 	
