@@ -40,14 +40,16 @@ MONITOR = 22
 
 def main():
     global message,pintext
-    
+
+    #start by running all the init methods
     print "working"
     pin_setup()
     lcd_functions.lcd_init()
     getmachine()
-    
-    next_job = web_scrape.get_site()
-    marquee = next_job
+
+    #get the initial state of the job site
+    next_job = web_scrape.get_site() #holds raw string for next job
+    marquee = next_job  #not used righ now
     message = "Next Job: " + next_job[:6]
     pintext = "EnterPin: "
     lcd_update(message,pintext)
