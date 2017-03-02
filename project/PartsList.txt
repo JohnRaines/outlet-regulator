@@ -90,3 +90,8 @@ TERMINAL BLOCK HEADERS
 	DIGIKEYLINK: http://www.digikey.com/scripts/DkSearch/dksus.dll?Detail&itemSeq=216850970&uq=636208717186163630
 	
 	
+	scratch work
+	-----------------------------
+	http://www.digikey.com/product-detail/en/keystone-electronics/739/36-739-ND/106230
+	
+	
